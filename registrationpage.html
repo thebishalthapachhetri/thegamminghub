@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!----------------------------------Navigation------------------------------->
+
+<head>
+    <title>Gamming Hub</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<!----------------------------------Body------------------------------->
+
+<body>
+
+    <?php
+include 'DB_connect.php';
+?>
+
+    <!----------------------------------Header------------------------------->
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+
+                    <a class="navbar-brand" href="#">Gamming Hub</a>
+
+                    <li class="active"><a href="#">HOME</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">PRODUCTS<span
+                                class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">CPUs</a></li>
+                            <li><a href="#">Monitor</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">CONTACT</a></li>
+
+
+                    <form class="navbar-form navbar-left">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default">Search</button>
+                    </form>
+                </ul>
+
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> User</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!----- /header ------>
+
+
+  <!----------------------------------Container------------------------------->
+
+    <div class="container">
+        <h1>REGISTER</h1>
+        <h3>Please enter information to create your account</h3>
+        <form action="signup_submit.php" method="POST">
+            <div class="form-group">
+                <label for="firstName">First Name:</label>
+                <input type="firstName" class="form-control" id="firstName" placeholder="Enter first name" name="firstName">
+
+                <label for="lastName">Last Name:</label>
+                <input type="lastName" class="form-control" id="lastName" placeholder="Enter last name" name="lastName">
+
+
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+
+
+                <label for="password">Password:</label>
+                <input type="password" class="form-control" id="password" placeholder="Enter password" name="password">
+
+
+                <label for="address">Address:</label>
+                <input type="address" class="form-control" id="address" placeholder="Enter address" name="address">
+
+                <br>
+                <label for="gender">Gender:</label>
+                <div class="radio">
+                    <label><input type="radio" name="optradio" value="male">Male</label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" name="optradio" value="female">Female</label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" name="optradio" value="others">Other</label>
+                </div><br>
+            </div>
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+        </form>
+    </div>
+    <!---- /Container ----->>
+
+        <!---------------------------------footer---------------------------------->
+
+        <footer>
+            <div class="footer-container-fluid text-center">
+
+                <div class="row">
+
+                    <p>Copyright © 2021 Gamming Hub. All rights reserved.</p>
+
+
+                </div>
+
+            </div>
+
+        </footer>
+        <!--------- /footer ---------->
+
+</body>
+
+</html>
